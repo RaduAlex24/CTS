@@ -16,9 +16,11 @@ public class Main {
 
         WildCat wildCat1 = new WildCat("wildCat1","mancare1");
         WildCat wildCat2 = new WildCat("wildCat2");
+        WildCat wildCat3 = new WildCat("wildCat3");
 
         zoo.addAnimal(wildCat1);
         zoo.addAnimal(wildCat2);
+        zoo.addAnimal(wildCat3);
         zoo.feedAllAnimals();
     }
 }
