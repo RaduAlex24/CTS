@@ -21,6 +21,7 @@ public class Main {
         zoo.addAnimal(wildCat1);
         zoo.addAnimal(wildCat2);
         zoo.addAnimal(wildCat3);
+
         zoo.feedAllAnimals();
     }
 }
