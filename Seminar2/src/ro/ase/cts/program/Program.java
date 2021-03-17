@@ -1,7 +1,9 @@
 package ro.ase.cts.program;
 
 import ro.ase.cts.clase.Aplicant;
+import ro.ase.cts.reader.ReaderAngajati;
 import ro.ase.cts.reader.ReaderAplicant;
+import ro.ase.cts.reader.ReaderElevi;
 import ro.ase.cts.reader.ReaderStudent;
 
 import java.io.FileNotFoundException;
@@ -17,8 +19,11 @@ public class Program {
         List<Aplicant> listaAplicanti;
         try {
             listaAplicanti = citireAplicanti(new ReaderStudent("studenti.txt"));
-            for (Aplicant aplicant : listaAplicanti)
+            for (Aplicant aplicant : listaAplicanti) {
+                aplicant.statut();
+                aplicant.finantare();
                 System.out.println(aplicant.toString());
+            }
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

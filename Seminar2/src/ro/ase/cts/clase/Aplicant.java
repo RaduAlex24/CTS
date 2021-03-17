@@ -3,6 +3,7 @@ package ro.ase.cts.clase;
 import java.util.Arrays;
 
 public abstract class Aplicant {
+    public static final int PragAcceptare = 80;
     protected String nume;
     protected String prenume;
     protected int varsta;
@@ -35,13 +36,14 @@ public abstract class Aplicant {
         this.varsta = varsta;
     }
 
-    // Trebuie modificat "80" si se repeta system out
     public void statut() {
-        if (punctaj > 80)
-            System.out.println("Aplicantul " + nume + " " + prenume + " a fost acceptat.");
-        else
-            System.out.println("Aplicantul " + nume + " " + prenume + " nu a fost acceptat.");
+        String rezultat;
+        rezultat = punctaj > PragAcceptare ? " a fost acceptat." : " nu a fost acceptat.";
+
+        System.out.println("Aplicantul " + nume + " " + prenume + rezultat);
     }
+
+    public abstract void finantare();
 
     public int getPunctaj() {
         return punctaj;
