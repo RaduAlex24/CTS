@@ -1,4 +1,4 @@
-package ro.ase.cts.singletoneLazy;
+package ro.ase.cts.singletonLazy;
 
 public class AsigurareMedicala {
     private int id;

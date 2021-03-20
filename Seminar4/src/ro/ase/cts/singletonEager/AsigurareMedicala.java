@@ -1,4 +1,4 @@
-package ro.ase.cts.singletoneEager;
+package ro.ase.cts.singletonEager;
 
 public class AsigurareMedicala {
     private int id;
