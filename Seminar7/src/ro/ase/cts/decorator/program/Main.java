@@ -1,9 +1,8 @@
 package ro.ase.cts.decorator.program;
 
+import ro.ase.cts.decorator.clase.Bilet;
 import ro.ase.cts.decorator.clase.Card;
-import ro.ase.cts.decorator.decorator.AbstractDecorator;
-import ro.ase.cts.decorator.decorator.DecoratorContactless;
-import ro.ase.cts.decorator.decorator.DecoratorContactlessTelefon;
+import ro.ase.cts.decorator.decorator.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,6 +21,17 @@ public class Main {
         AbstractDecorator abstractDecorator1 = new DecoratorContactlessTelefon(card);
         abstractDecorator1.platesteContactless();
 
-        AbstractDecorator abstractDecorator2 = new DecoratorContactless(abstractDecorator);
+        // Decorator ex 6
+        Bilet bilet = new Bilet("Steau", "Rapid");
+        bilet.rezervaBilet();
+
+        AbstractDecoratorEx2 meciInGhencea = new DecoratorSustinereEchipa(bilet);
+        meciInGhencea.rezervaBilet();
+
+        AbstractDecoratorEx2 meciDePaste = new DecoratorPasteFericit(bilet);
+        meciDePaste.rezervaBilet();
+
+        AbstractDecoratorEx2 meciInGhenceaDePaste = new DecoratorPasteFericit(meciInGhencea);
+        meciInGhenceaDePaste.rezervaBilet();
     }
 }
